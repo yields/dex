@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dex</title>
+</head>
+<body>
+  <script src='build/build.js'></script>
+  <script>
+    var dex = require('dex');
+
+    dex()
+    .set('a', rhex())
+    .set('b', rhex())
+    .get('a')
+    .get('b')
+    .del('b')
+    .end(function(err, all){
+      console.log('all: %O', all);
+    })
+
+    function rhex(){
+      return Math
+        .random()
+        .toString('16')
+        .slice(2);
+    }
+  </script>
+</body>
+</html>

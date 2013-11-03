@@ -1,0 +1,21 @@
+{
+  "name": "dex",
+  "repo": "yields/dex",
+  "description": "redis inspired indexeddb wrapper",
+  "version": "0.0.1",
+  "keywords": ["redis", "dex", "indexeddb", "db", "indexed", "index"],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": ["lib/index.js", "lib/commands.js"],
+  "dependencies": {
+    "visionmedia/debug": "*",
+    "visionmedia/batch": "*",
+    "component/emitter": "*",
+    "component/each": "*"
+  },
+  "development": {
+    "component/assert": "*",
+    "visionmedia/mocha-matrix": "*",
+    "visionmedia/mocha": "*"
+  }
+}
