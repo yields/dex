@@ -142,4 +142,18 @@ describe('dex', function(){
     })
   })
 
+  describe('batch', function(){
+    it('should be cleaned up on end', function(done){
+      var d = dex()
+        .set('a', 'a')
+        .set('b', 'b')
+        .set('c', 'c')
+        .end(function(err, all){
+          if (err) return done(err);
+          assert(0 == d.batch.fns.length);
+          done();
+        });
+    })
+  })
+
 });
