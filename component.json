@@ -2,7 +2,7 @@
   "name": "dex",
   "repo": "yields/dex",
   "description": "redis inspired indexeddb wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["redis", "dex", "indexeddb", "db", "indexed", "index"],
   "license": "MIT",
   "main": "lib/index.js",
