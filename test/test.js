@@ -23,7 +23,7 @@ describe('dex', function(){
       var d = dex().set('a', 'b').get('a');
       assert(2 == d.queue.length);
       d.on('connect', function(){
-        console.log(0 == d.queue.length);
+        assert(0 == d.queue.length);
         done();
       })
     })
