@@ -13,6 +13,22 @@ describe('dex', function(){
     DB.deleteDatabase('__dex__');
   })
 
+  describe('#CMD', function(){
+    it('should add it to queue', function(){
+      var d = dex().set('a', 'b');
+      assert(1 == d.queue.length);
+    })
+
+    it('should empty the queue when a connection is established', function(done){
+      var d = dex().set('a', 'b').get('a');
+      assert(2 == d.queue.length);
+      d.on('connect', function(){
+        console.log(0 == d.queue.length);
+        done();
+      })
+    })
+  })
+
   describe('#set', function(){
     it('should set `key`, `value`', function(done){
       dex().set('foo', 'baz', function(err, e){
