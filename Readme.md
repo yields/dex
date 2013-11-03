@@ -46,6 +46,10 @@ dex
 
   Create a new `Database` instance.
 
+#### #quit
+
+  Disconnect
+
 #### #set
 
   Set `key`, `value` with optional `fn(err, o)`
