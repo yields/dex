@@ -1,4 +1,10 @@
 
+0.1.0 / 2013-11-04
+==================
+
+ * use idb-request
+ * simpler object store structure
+
 0.0.2 / 2013-11-03
 ==================
 
