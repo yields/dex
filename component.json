@@ -8,6 +8,7 @@
   "main": "lib/index.js",
   "scripts": ["lib/index.js", "lib/commands.js"],
   "dependencies": {
+    "yields/idb-request": "*",
     "visionmedia/debug": "*",
     "visionmedia/batch": "*",
     "component/emitter": "*",
