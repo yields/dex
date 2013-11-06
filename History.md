@@ -1,4 +1,12 @@
 
+0.2.0 / 2013-11-06
+==================
+
+ * add `"set"`, `"del"` events closes #3
+ * add "progress" event
+ * add connecting flag
+ * rename `select()` to `connect()`
+
 0.1.0 / 2013-11-04
 ==================
 
