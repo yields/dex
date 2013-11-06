@@ -200,6 +200,27 @@ describe('dex', function(){
         d.end(function(){})
       })
     })
+
+    describe('progress', function(){
+      it('should be emitted on transaction progress', function(done){
+        var d = dex();
+        var vals = ['a', 'b', 'c'];
+        var emitted = 0;
+        d.set('a', 'a');
+        d.set('b', 'b');
+        d.set('c', 'c');
+
+        d.on('progress', function(e){
+          assert(vals.shift() == e.value.item);
+          ++emitted;
+        });
+
+        d.end(function(){
+          assert(3 == emitted);
+          done();
+        });
+      })
+    })
   })
 
 });

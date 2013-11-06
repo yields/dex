@@ -47,6 +47,7 @@ dex
   - `("connect", event)`
   - `("abort", event)`, emitted when a transaction is aborted
   - `("complete", event)`, emitted when a transaction is completed
+  - `("progress", event)`, emitted on transaction progress
 
 ### dex()
 
