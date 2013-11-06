@@ -42,6 +42,12 @@ dex
 
 ## API
 
+### events
+
+  - `("connect", event)`
+  - `("abort", event)`, emitted when a transaction is aborted
+  - `("complete", event)`, emitted when a transaction is completed
+
 ### dex()
 
   Create a new `Database` instance.

@@ -156,4 +156,50 @@ describe('dex', function(){
     })
   })
 
+  describe('events', function(){
+    describe('connect', function(){
+      it('should be emitted when connection is established', function(done){
+        dex().on('connect', function(e){
+          assert(Event == e.constructor);
+          done();
+        });
+      })
+    })
+
+    describe('abort', function(){
+      it('should be emitted when a transaction is aborted', function(done){
+        var d = dex();
+        d.set('a', 'a');
+        d.set('b', 'b');
+        d.set('c', 'c');
+        d.end(function(){});
+
+        d.on('abort', function(e){
+          assert(Event == e.constructor);
+          done();
+        });
+
+        d.batch.on('progress', function(){
+          d.transactions.readwrite.abort();
+        });
+      })
+    })
+
+    describe('complete', function(){
+      it('should be emitted when a transaction is completed', function(done){
+        var d = dex();
+        d.set('a', 'a');
+        d.set('b', 'b');
+        d.set('c', 'c');
+
+        d.on('complete', function(e){
+          assert(Event == e.constructor);
+          done();
+        })
+
+        d.end(function(){})
+      })
+    })
+  })
+
 });
