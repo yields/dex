@@ -48,6 +48,8 @@ dex
   - `("abort", event)`, emitted when a transaction is aborted
   - `("complete", event)`, emitted when a transaction is completed
   - `("progress", event)`, emitted on transaction progress
+  - `("set", key, value)`, emitted when `key`, `value` are saved.
+  - `("del", key)`, emitted when a `key` is deleted.
 
 ### dex()
 

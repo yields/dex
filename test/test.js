@@ -221,6 +221,33 @@ describe('dex', function(){
         });
       })
     })
+
+    describe('set', function(){
+      it('should be emitted on each set with `key`, `value`', function(done){
+        var d = dex();
+
+        d.on('set', function(key, value){
+          assert('a' == key);
+          assert('b' == value);
+          done();
+        });
+
+        d.set('a', 'b').end(function(){});
+      })
+    })
+
+    describe('del', function(){
+      it('should be emitted when a `key` is deleted with `key`', function(done){
+        var d = dex();
+
+        d.on('del', function(key){
+          assert('a' == key);
+          done();
+        })
+
+        d.del('a').end(function(){});
+      })
+    })
   })
 
 });
