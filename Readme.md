@@ -46,6 +46,11 @@ dex
 
   Create a new `Database` instance.
 
+#### #connect
+
+  The method is called automatically, you don't need to call
+  it unless you `quit()`.
+
 #### #quit
 
   Disconnect
