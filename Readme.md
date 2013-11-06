@@ -110,8 +110,7 @@ dex()
 .end(function(err, all){});
 ```
 
-  in the above snippet `dex()` will create a transaction
-  of `readonly` (to improve) performance.
+  in the above snippet `dex()` will create a single `readonly` transaction.
 
 ```js
 dex()
