@@ -51,6 +51,13 @@ dex
   - `("set", key, value)`, emitted when `key`, `value` are saved.
   - `("del", key)`, emitted when a `key` is deleted.
 
+### dex#command
+
+  `command(name, fn)` is a static method that allows you
+  to define new commands easily.
+
+  all `dex()` are defined using this method, see examples in [`lib/commands.js`](/yields/dex/blob/master/lib/commands.js)
+
 ### dex()
 
   Create a new `Database` instance.
