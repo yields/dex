@@ -88,6 +88,33 @@ dex
 dex().keys(/a/, function(err, keys){});
 ```
 
+#### #abort
+
+  Abort all running transactions.
+
+```js
+var d = dex();
+var i = 0;
+d.set('multi', 1);
+d.set(1, 1);
+d.set(2, 2);
+d.set(3, 3);
+d.get(3);
+d.set(4, 4);
+
+d.on('progress', function(e){
+  if (1 == i++) d.abort();
+});
+
+d.end(function(err){
+  assert(err);
+  d.get('multi', function(err, o){
+    if (err) return done(err);
+    assert(!o.item);
+  });
+});
+```
+
 #### #end
 
   Invoke the transaction.
