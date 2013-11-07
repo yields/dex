@@ -56,7 +56,7 @@ dex
   `command(name, fn)` is a static method that allows you
   to define new commands easily.
 
-  all `dex()` commands are defined using this method, see examples in [`lib/commands.js`](/yields/dex/blob/master/lib/commands.js)
+  all `dex()` commands are defined using this method, see examples in [`lib/commands.js`](lib/commands.js)
 
 ### dex()
 
