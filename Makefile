@@ -1,18 +1,19 @@
 
+C8= node_modules/.bin/component
 BROWSERS= 'ie10..11, chrome'
 GRAVY= node_modules/.bin/gravy
 URL= http://localhost:3000/test
 SRC= $(wildcard lib/*.js)
 
-build: components $(SRC)
-	@component build --dev
+build: node_modules components $(SRC)
+	@$(C8) build --dev
 
 components: component.json
-	@component install --dev
+	@$(C8) install --dev
 
 clean:
+	rm -fr build components template.js node_modules
 	@$(MAKE) kill
-	rm -fr build components template.js
 
 node_modules: package.json
 	@npm install
