@@ -6,11 +6,11 @@
     <link rel='stylesheet' href='../build/build.css'>
     <script src='../build/build.js'></script>
     <script>require('mocha')</script>
-    <script>mocha.setup({ ui: 'bdd', reporter: require('mocha-matrix') })</script>
+    <script>mocha.setup({ ui: 'bdd' })</script>
   </head>
   <body>
     <div id='mocha'></div>
     <script src='test.js'></script>
-    <script>mocha.run()</script>
+    <script>require('gravy')(mocha.run())</script>
   </body>
 </html>

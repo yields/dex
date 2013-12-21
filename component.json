@@ -18,6 +18,7 @@
   "development": {
     "component/assert": "*",
     "visionmedia/mocha-matrix": "*",
-    "visionmedia/mocha": "*"
+    "visionmedia/mocha": "*",
+    "yields/gravy": "*"
   }
 }
