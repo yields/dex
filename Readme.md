@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/yields/dex.png?branch=master)](https://travis-ci.org/yields/dex)
 
 # dex
 
