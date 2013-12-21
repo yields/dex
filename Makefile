@@ -1,6 +1,6 @@
 
 C8= node_modules/.bin/component
-BROWSERS= 'ie10..11, chrome'
+BROWSERS= 'ie10'
 GRAVY= node_modules/.bin/gravy
 URL= http://localhost:3000/test
 SRC= $(wildcard lib/*.js)
@@ -33,7 +33,7 @@ test-sauce: build server
 	@$(MAKE) kill
 
 kill:
-	@kill `cat test/pid`
+	@-kill `cat test/pid`
 	@rm -f test/pid
 
 .PHONY: clean test test-sauce
