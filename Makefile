@@ -1,6 +1,6 @@
 
 C8= node_modules/.bin/component
-BROWSERS= 'ie10'
+BROWSERS= 'ie10..11, chrome'
 GRAVY= node_modules/.bin/gravy
 URL= http://localhost:3000/test
 SRC= $(wildcard lib/*.js)
