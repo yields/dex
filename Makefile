@@ -29,7 +29,7 @@ test: build server
 	@open $(URL)
 
 test-sauce: build server
-	@BROWSERS=$(BROWSERS) $(GRAVY) --url $(URL)
+	@$(GRAVY) --url $(URL)
 	@$(MAKE) kill
 
 kill:
